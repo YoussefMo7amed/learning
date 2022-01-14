@@ -8,5 +8,19 @@
     </head>
     <body>
         <h1>My Todos</h1>
+        <ul id="todos"></ul>
     </body>
+    <script>
+        const electron = require("electron");
+        const { ipcRenderer } = electron;
+        let todos = document.getElementById("todos");
+        ipcRenderer.on("input:add", (event, data) => {
+            let li = document.createElement("li", (nodeValue = data));
+            li.append(data);
+            todos.appendChild(li);
+        });
+        ipcRenderer.on("todos:clear", () => {
+            todos.innerHTML = "";
+        });
+    </script>
 </html>

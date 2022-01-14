@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> </head>
+    <body>
+        <form action="">
+            <div>
+                <label for="">Enter Your Todos</label>
+                <input autofocus type="text" />
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </body>
+    <script>
+        const electron = require("electron");
+        const { ipcRenderer } = electron;
+        document.querySelector("form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            value = document.querySelector("input").value;
+            ipcRenderer.send("input:add", value);
+        });
+    </script>
+</html>
