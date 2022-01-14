@@ -6,6 +6,8 @@ const ffmpeg = require('fluent-ffmpeg');
 let mainWindow;
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
+        // I added this object because of nodeIntegration is false by default (true WAS the default)
+        // this object for writting nodejs code inside HTML
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false
