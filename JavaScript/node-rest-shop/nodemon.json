@@ -1,7 +1,0 @@
-{
-    "env": {
-        "MONGO_ATALS_USERNAME": "me",
-        "MONGO_ATALS_PASSWORD": "password9510",
-        "JWT_KEY": "bigSecret"
-    }
-}
