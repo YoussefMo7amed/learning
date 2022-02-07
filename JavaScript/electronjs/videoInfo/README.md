@@ -86,7 +86,7 @@ Electron specific configuration and logic
 Keep as generic as possible, increases possible reuse on plain web
 
 ### IPC system
-we will use the IPC to communicate between Electron app and mainWindow
+we will use the IPC (Inter Process Communication) to communicate between Electron app and mainWindow
 
 - The browser window has some additional capibalilies that chrome doesn't
     - You can use the "require" word in electron (note that the browser doesn't support it)
